@@ -1,0 +1,50 @@
+
+ion-toolbar{
+  --padding-top:16px;
+  --padding-bottom:24px;
+  --padding-start:8px;
+  --padding-end:8px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+.primary-toolbar {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  &-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    &__icon {
+      font-size: 1.5rem;
+    }
+    &-text {
+      display: flex;
+      flex-direction: column;
+
+      &__title {
+        font-size: smaller;
+
+      }
+      &__subtitle {
+        font-weight: 600;
+        line-height: 1.7rem;
+      }
+    }
+  }
+}
+
+.searchbar {
+  z-index: 10;
+  position: absolute;
+  width: 100vw;
+
+  &__input {
+    --background: white;
+    --border-radius:8px;
+    margin-top: -24px;
+    padding: 0 16px;
+  }
+}
