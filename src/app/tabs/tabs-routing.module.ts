@@ -1,34 +1,37 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AkunSayaComponent } from './akun-saya/akun-saya.component';
+import { BerandaComponent } from './beranda/beranda.component';
 import { TabsPage } from './tabs.page';
+import { TransaksiComponent } from './transaksi/transaksi.component';
 
 const routes: Routes = [
   {
     path: 'tabs',
     component: TabsPage,
-    children: [
+    loadChildren: () => [
       {
-        path: 'tab1',
-        loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+        path: 'beranda',
+        component: BerandaComponent,
       },
       {
-        path: 'tab2',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+        path: 'transaksi',
+        component: TransaksiComponent,
       },
       {
-        path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+        path: 'akun-saya',
+        component: AkunSayaComponent,
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/beranda',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/beranda',
     pathMatch: 'full'
   }
 ];
@@ -36,4 +39,4 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forChild(routes)],
 })
-export class TabsPageRoutingModule {}
+export class TabsPageRoutingModule { }
