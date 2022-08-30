@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { AkunSayaHeaderComponent } from './akun-saya-header/akun-saya-header.component';
 
 @Component({
   selector: 'app-akun-saya',
@@ -8,6 +9,7 @@ import { IonicModule } from '@ionic/angular';
   standalone: true,
   imports:[
     IonicModule,
+    AkunSayaHeaderComponent,
   ]
 })
 export class AkunSayaComponent implements OnInit {

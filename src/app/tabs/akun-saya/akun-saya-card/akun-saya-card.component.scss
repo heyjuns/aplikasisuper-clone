@@ -1,0 +1,13 @@
+ion-card{
+  --background:transparent;
+  text-align: center;
+  box-shadow: none;
+  &-title, &-subtitle{
+    --color:white;
+  }
+
+  ion-avatar{
+    display: block;
+    margin: 0 auto;
+  }
+}
