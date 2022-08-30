@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { DompetSuperStatusComponent } from 'src/app/shared-components/dompet-super-status/dompet-super-status.component';
 import { OverlapToolbarComponent } from 'src/app/shared-components/overlap-toolbar/overlap-toolbar.component';
 import { AkunSayaCardComponent } from '../akun-saya-card/akun-saya-card.component';
 
@@ -11,7 +12,8 @@ import { AkunSayaCardComponent } from '../akun-saya-card/akun-saya-card.componen
   imports: [
     IonicModule,
     OverlapToolbarComponent,
-    AkunSayaCardComponent
+    AkunSayaCardComponent,
+    DompetSuperStatusComponent,
   ]
 })
 export class AkunSayaHeaderComponent implements OnInit {
