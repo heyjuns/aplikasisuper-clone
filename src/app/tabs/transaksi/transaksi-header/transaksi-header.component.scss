@@ -1,0 +1,18 @@
+.segment{
+  padding: 0 16px;
+}
+
+.app-overlap-toolbar {
+  &__segment {
+    background: white;
+    padding: 6px;
+    margin: 0 auto;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    &-button {
+      --background-checked:var(--ion-color-primary);
+      --color: var(--ion-color-medium);
+      --color-checked: white;
+      --indicator-color:none;
+    }
+  }
+}

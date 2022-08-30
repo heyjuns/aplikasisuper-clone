@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
-import { HeaderComponent } from './header/header.component';
+import { BerandaHeaderComponent } from './beranda-header/beranda-header.component';
 
 @Component({
   selector: 'app-beranda',
@@ -9,7 +9,7 @@ import { HeaderComponent } from './header/header.component';
   standalone: true,
   imports:[
     IonicModule,
-    HeaderComponent,
+    BerandaHeaderComponent
   ]
 })
 export class BerandaComponent implements OnInit {

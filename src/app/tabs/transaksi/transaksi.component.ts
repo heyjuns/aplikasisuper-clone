@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { TransaksiHeaderComponent } from './transaksi-header/transaksi-header.component';
 
 @Component({
   selector: 'app-transaksi',
@@ -8,6 +9,7 @@ import { IonicModule } from '@ionic/angular';
   standalone: true,
   imports:[
     IonicModule,
+    TransaksiHeaderComponent,
   ]
 })
 export class TransaksiComponent implements OnInit {

@@ -24,3 +24,18 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap');
+
+*{
+  font-family: 'Barlow', sans-serif;
+}
+
+ion-toolbar {
+  --padding-top: 16px;
+  --padding-bottom: 24px;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  --min-height:88px;
+}
