@@ -15,7 +15,7 @@ import { ListHelper } from 'src/app/tabs/tabs';
 })
 export class MenuItemComponent implements OnInit {
   @Input() title: string;
-  @Input() menuItems: ListHelper[];
+  @Input() menuItems: ListHelper[] = [];
   constructor() { }
 
   ngOnInit() { }
