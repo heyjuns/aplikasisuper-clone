@@ -1,0 +1,5 @@
+<swiper pager="true" [autoplay]="true" [pagination]="true" [loop]="true">
+  <ng-template swiperSlide *ngFor="let item of listOfJumbotron">
+    <img [src]="item.url" [alt]="item.name" />
+  </ng-template>
+</swiper>

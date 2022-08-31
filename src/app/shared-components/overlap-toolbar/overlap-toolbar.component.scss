@@ -1,12 +1,10 @@
 .overlap-toolbar {
   z-index: 10;
   position: absolute;
-  margin-top: -24px;
+  margin-top: -1.5rem;
   width: 100vw;
 
   &-wrapper{
     padding: 0 16px;
-    margin-top: -0.5rem;
-
   }
 }

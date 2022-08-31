@@ -26,6 +26,16 @@
 @import "~@ionic/angular/css/flex-utils.css";
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap');
 
+
+@import '~swiper/scss';
+@import '~@ionic/angular/css/ionic-swiper';
+@import '~swiper/scss';
+@import '~swiper/scss/autoplay';
+@import '~swiper/scss/keyboard';
+@import '~swiper/scss/pagination';
+@import '~swiper/scss/scrollbar';
+@import '~swiper/scss/zoom';
+@import '~@ionic/angular/css/ionic-swiper';
 *{
   font-family: 'Barlow', sans-serif;
 }
@@ -39,3 +49,8 @@ ion-toolbar {
   border-bottom-right-radius: 16px;
   --min-height:88px;
 }
+// ion-content{
+//   --padding-top:1rem;
+//   --padding-start:1rem;
+//   --padding-end:1rem;
+// }

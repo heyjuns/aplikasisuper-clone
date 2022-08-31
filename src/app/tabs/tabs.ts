@@ -1,5 +1,5 @@
-export interface TabsHelper {
-  name: string;
-  url: string;
-  icon: string;
+export interface ListHelper {
+  name?: string;
+  url?: string;
+  icon?: string;
 }

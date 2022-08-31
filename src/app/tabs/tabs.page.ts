@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TabsHelper } from './tabs';
+import { ListHelper } from './tabs';
 
 @Component({
   selector: 'app-tabs',
@@ -7,7 +7,7 @@ import { TabsHelper } from './tabs';
   styleUrls: ['tabs.page.scss']
 })
 export class TabsPage {
-  listOfTabs: TabsHelper[] = [
+  listOfTabs: ListHelper[] = [
     {
       name: 'Beranda',
       url: 'beranda',
