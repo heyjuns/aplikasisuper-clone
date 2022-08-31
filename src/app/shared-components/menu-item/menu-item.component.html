@@ -1,0 +1,11 @@
+<ng-container class="menu">
+  <section class="menu-items">
+    <h1 class="menu-items__category">{{title}}</h1>
+    <div class="menu-items__wrapper">
+      <button class="menu-items__wrapper-item" *ngFor="let menu of menuItems">
+        <ion-icon [name]="menu.icon" class="menu-items__wrapper-item-icon shadow-md" size="large"></ion-icon>
+        <p class="menu-items__wrapper-item-title">{{menu.name}}</p>
+      </button>
+    </div>
+  </section>
+</ng-container>

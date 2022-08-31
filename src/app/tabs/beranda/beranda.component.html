@@ -11,26 +11,8 @@
     </app-overlap-toolbar>
   </ng-container>
 
-  <ng-container class="menu">
-    <section class="menu-items">
-      <h1 class="menu-items__category">Kategori Produk</h1>
-      <div class="menu-items__wrapper">
-        <button class="menu-items__wrapper-item">
-          <ion-icon name="apps" class="menu-items__wrapper-item-icon shadow-md" size="large"></ion-icon>
-          <p class="menu-items__wrapper-item-title">Semua Kategori</p>
-        </button>
-        <button class="menu-items__wrapper-item">
-          <ion-icon name="camera" class="menu-items__wrapper-item-icon shadow-md" size="large"></ion-icon>
-          <p class="menu-items__wrapper-item-title">Kecantikan</p>
-        </button>
-        <button class="menu-items__wrapper-item">
-          <ion-icon name="diamond" class="menu-items__wrapper-item-icon shadow-md" size="large"></ion-icon>
-          <p class="menu-items__wrapper-item-title">Perawatan Tubuh</p>
-        </button>
-
-      </div>
-    </section>
-  </ng-container>
+  <app-menu-item title="Kategori Produk" [menuItems]="listOfProductCategory"></app-menu-item>
+  <app-menu-item title="Super Digital" [menuItems]="listOfSuperDigital"></app-menu-item>
 
 
 </ion-content>
