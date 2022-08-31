@@ -3,7 +3,7 @@ import { IonicModule } from '@ionic/angular';
 import { DompetSuperStatusComponent } from 'src/app/shared-components/dompet-super-status/dompet-super-status.component';
 import { OverlapToolbarComponent } from 'src/app/shared-components/overlap-toolbar/overlap-toolbar.component';
 import { BerandaHeaderComponent } from './beranda-header/beranda-header.component';
-import { ImageCarouselComponent } from './image-carousel/image-carousel.component';
+import { ImageSlideshowComponent } from './image-slideshow/image-slideshow.component';
 
 @Component({
   selector: 'app-beranda',
@@ -15,7 +15,7 @@ import { ImageCarouselComponent } from './image-carousel/image-carousel.componen
     BerandaHeaderComponent,
     DompetSuperStatusComponent,
     OverlapToolbarComponent,
-    ImageCarouselComponent,
+    ImageSlideshowComponent
   ]
 })
 export class BerandaComponent implements OnInit {

@@ -1,17 +1,16 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { IonicModule } from '@ionic/angular';
 import { ListHelper } from '../../tabs';
 import { SwiperModule } from 'swiper/angular';
 import SwiperCore, { Autoplay, Keyboard, Pagination, Scrollbar, Zoom } from 'swiper';
-import { IonicSlides } from '@ionic/angular';
+import { IonicModule, IonicSlides } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 
 SwiperCore.use([Autoplay, Keyboard, Pagination, Scrollbar, Zoom, IonicSlides]);
 
 @Component({
-  selector: 'app-image-carousel',
-  templateUrl: './image-carousel.component.html',
-  styleUrls: ['./image-carousel.component.scss'],
+  selector: 'app-image-slideshow',
+  templateUrl: './image-slideshow.component.html',
+  styleUrls: ['./image-slideshow.component.scss'],
   encapsulation: ViewEncapsulation.None,
   standalone: true,
   imports: [
@@ -20,7 +19,7 @@ SwiperCore.use([Autoplay, Keyboard, Pagination, Scrollbar, Zoom, IonicSlides]);
     CommonModule,
   ]
 })
-export class ImageCarouselComponent implements OnInit {
+export class ImageSlideshowComponent implements OnInit {
   listOfJumbotron: ListHelper[] = [
     {
       // eslint-disable-next-line max-len
@@ -36,12 +35,8 @@ export class ImageCarouselComponent implements OnInit {
       name:'Gambar 3',
     },
   ];
-
   constructor() { }
 
-  ngOnInit() {
-
-    console.log(this.listOfJumbotron);
-  }
+  ngOnInit() {}
 
 }
