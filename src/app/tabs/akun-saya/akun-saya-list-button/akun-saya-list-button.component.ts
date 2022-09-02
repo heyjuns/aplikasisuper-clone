@@ -1,9 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { IonicModule, IonModal, ModalController } from '@ionic/angular';
+import { IonicModule, ModalController } from '@ionic/angular';
 import { AcceptableModalAkunSaya, ListWithActionHelper } from '../akun-saya';
+import { ModalAkunBankComponent } from '../modal-akun-bank/modal-akun-bank.component';
 import { ModalAlamatPengirimanComponent } from '../modal-alamat-pengiriman/modal-alamat-pengiriman.component';
+import { ModalBantuanComponent } from '../modal-bantuan/modal-bantuan.component';
+import { ModalBeriPenilaianComponent } from '../modal-beri-penilaian/modal-beri-penilaian.component';
 import { ModalDataDiriComponent } from '../modal-data-diri/modal-data-diri.component';
+import { ModalPengaturanComponent } from '../modal-pengaturan/modal-pengaturan.component';
+import { ModalUsulanHargaComponent } from '../modal-usulan-harga/modal-usulan-harga.component';
+import { ModalVoucherComponent } from '../modal-voucher/modal-voucher.component';
 
 
 @Component({
@@ -84,6 +90,12 @@ export class AkunSayaListButtonComponent implements OnInit {
     switch (name) {
       case 'DATA_DIRI': return ModalDataDiriComponent;
       case 'ALAMAT_PENGIRIMAN': return ModalAlamatPengirimanComponent;
+      case 'AKUN_BANK':return ModalAkunBankComponent;
+      case 'VOUCHER': return ModalVoucherComponent;
+      case 'USULAN_HARGA': return ModalUsulanHargaComponent;
+      case 'BANTUAN': return ModalBantuanComponent;
+      case 'PENGATURAN': return ModalPengaturanComponent;
+      case 'BERI_PENILAIAN': return ModalBeriPenilaianComponent;
       default: return;
     }
   }
