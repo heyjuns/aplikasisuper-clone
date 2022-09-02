@@ -1,13 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { IonicModule } from '@ionic/angular';
+import { IonicModule, IonModal, ModalController } from '@ionic/angular';
+import { AcceptableModalAkunSaya, ListWithActionHelper } from '../akun-saya';
+import { ModalAlamatPengirimanComponent } from '../modal-alamat-pengiriman/modal-alamat-pengiriman.component';
+import { ModalDataDiriComponent } from '../modal-data-diri/modal-data-diri.component';
 
-interface ListWithActionHelper {
-  icon: string;
-  title: string;
-  subtitle: string;
-  action(): void;
-}
 
 @Component({
   selector: 'app-akun-saya-list-button',
@@ -25,75 +22,69 @@ export class AkunSayaListButtonComponent implements OnInit {
       icon: 'person-circle-outline',
       title: 'Data Diri',
       subtitle: 'Atur atau ubah data diri',
-      action: () => this.openModalDataDiri(),
+      action: () => this.openModalByTitle('DATA_DIRI'),
     },
     {
       icon: 'location-outline',
       title: 'Alamat Pengiriman',
       subtitle: 'Lihat & ubah alamat pengiriman',
-      action: () => this.openModalAlamatPengiriman(),
+      action: () => this.openModalByTitle('ALAMAT_PENGIRIMAN'),
     },
     {
       icon: 'card-outline',
       title: 'Akun Bank',
       subtitle: 'Lihat daftar bank saya',
-      action: () => this.openModalAkunBank(),
+      action: () => this.openModalByTitle('AKUN_BANK'),
     },
     {
       icon: 'ticket-outline',
       title: 'Voucher',
       subtitle: 'Lihat semua promo & voucher menarik',
-      action: () => this.openModalVoucher(),
+      action: () => this.openModalByTitle('VOUCHER'),
     },
     {
       icon: 'pricetag-outline',
       title: 'Usulan Harga & Produk',
       subtitle: 'Ajukan harga dan produk yang kamu inginkan',
-      action: () => this.openModalUsulanHargaProduk(),
+      action: () => this.openModalByTitle('USULAN_HARGA'),
     },
     {
       icon: 'help-circle-outline',
       title: 'Bantuan',
       subtitle: 'Semua bantuan & informasi seputar aplikasi Super',
-      action: () => this.openModalBantuan(),
+      action: () => this.openModalByTitle('BANTUAN'),
     },
     {
       icon: 'settings-outline',
       title: 'Pengaturan',
       subtitle: 'Kelola Informasi dan akun disini',
-      action: () => this.openModalPengaturan(),
+      action: () => this.openModalByTitle('PENGATURAN'),
     },
     {
       icon: 'star-outline',
       title: 'Beri Penilaian',
       subtitle: 'Berikan tanggapanmu tentang Aplikasi Super!',
-      action: () => this.openModalPengaturan(),
+      action: () => this.openModalByTitle('BERI_PENILAIAN'),
     },
   ];
-  constructor() { }
+  constructor(
+    private mc: ModalController,
+  ) { }
 
   ngOnInit() { }
 
-  openModalDataDiri() {
-    throw new Error('Method not implemented.');
+  async openModalByTitle(name?: AcceptableModalAkunSaya) {
+    const component = this.getComponentType(name);
+    const modal = await this.mc.create({
+      component
+    });
+    modal.present();
   }
-  openModalAlamatPengiriman(): void {
-    throw new Error('Method not implemented.');
+  getComponentType(name: AcceptableModalAkunSaya) {
+    switch (name) {
+      case 'DATA_DIRI': return ModalDataDiriComponent;
+      case 'ALAMAT_PENGIRIMAN': return ModalAlamatPengirimanComponent;
+      default: return;
+    }
   }
-  openModalAkunBank(): void {
-    throw new Error('Method not implemented.');
-  }
-  openModalVoucher(): void {
-    throw new Error('Method not implemented.');
-  }
-  openModalUsulanHargaProduk(): void {
-    throw new Error('Method not implemented.');
-  }
-  openModalBantuan(): void {
-    throw new Error('Method not implemented.');
-  }
-  openModalPengaturan(): void {
-    throw new Error('Method not implemented.');
-  }
-
 }
