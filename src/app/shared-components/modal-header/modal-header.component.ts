@@ -14,7 +14,11 @@ import { IonicModule, ModalController } from '@ionic/angular';
 })
 export class ModalHeaderComponent implements OnInit {
   @Input() title!: string;
-  constructor() { }
+  constructor(private modalCtrl: ModalController) { }
   ngOnInit(): void {
+  }
+
+  dismissModal(data?: any) {
+    this.modalCtrl.dismiss(data);
   }
 }
