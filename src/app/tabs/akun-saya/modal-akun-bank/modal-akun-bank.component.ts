@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { IonicModule, ModalController } from '@ionic/angular';
+import { ModalHeaderComponent } from 'src/app/shared-components/modal-header/modal-header.component';
 
 @Component({
   selector: 'app-modal-akun-bank',
@@ -10,14 +11,12 @@ import { IonicModule, ModalController } from '@ionic/angular';
   imports: [
     CommonModule,
     IonicModule,
+    ModalHeaderComponent,
   ]
 })
 export class ModalAkunBankComponent implements OnInit {
-  constructor(private modalCtrl: ModalController) { }
+  constructor() { }
   ngOnInit(): void {
   }
 
-  dismissModal(data?: any) {
-    return this.modalCtrl.dismiss(data);
-  }
 }

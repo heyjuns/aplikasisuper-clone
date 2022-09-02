@@ -13,11 +13,7 @@ import { IonicModule, ModalController } from '@ionic/angular';
   ]
 })
 export class ModalBantuanComponent implements OnInit {
-  constructor(private modalCtrl: ModalController) { }
+  constructor() { }
   ngOnInit(): void {
-  }
-
-  dismissModal(data?: any) {
-    return this.modalCtrl.dismiss(data);
   }
 }
