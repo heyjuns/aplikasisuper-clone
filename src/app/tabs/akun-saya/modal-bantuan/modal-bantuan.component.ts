@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { IonicModule, ModalController } from '@ionic/angular';
+import { IonicModule } from '@ionic/angular';
+import { ModalHeaderComponent } from 'src/app/shared-components/modal-header/modal-header.component';
 
 @Component({
   selector: 'app-modal-bantuan',
@@ -10,6 +11,7 @@ import { IonicModule, ModalController } from '@ionic/angular';
   imports: [
     CommonModule,
     IonicModule,
+    ModalHeaderComponent,
   ]
 })
 export class ModalBantuanComponent implements OnInit {

@@ -1,12 +1,14 @@
-<ion-list mode="md" class="ion-padding">
-  <ion-item button *ngFor="let item of listOfPersonalInfo" (click)="item.action()">
-    <ion-icon [name]="item.icon"></ion-icon>
-    <div>
-      <h1>{{item.title}}</h1>
-      <p>{{item.subtitle}}</p>
-    </div>
-  </ion-item>
-  <p class="version">
-    version: 0.00.00
-  </p>
-</ion-list>
+<section>
+  <ion-list mode="md" class="ion-padding shadow-md">
+    <ion-item button *ngFor="let item of listOfPersonalInfo" (click)="item.action()">
+      <ion-icon [name]="item.icon"></ion-icon>
+      <div>
+        <h1>{{item.title}}</h1>
+        <p>{{item.subtitle}}</p>
+      </div>
+    </ion-item>
+    <p class="version">
+      version: 0.00.00
+    </p>
+  </ion-list>
+</section>
