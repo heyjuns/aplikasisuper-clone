@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { DompetSuperStatusComponent } from 'src/app/shared-components/dompet-super-status/dompet-super-status.component';
+import { MenuCardItem } from 'src/app/shared-components/menu-card/menu-card';
+import { MenuCardComponent } from 'src/app/shared-components/menu-card/menu-card.component';
 import { MenuItemComponent } from 'src/app/shared-components/menu-item/menu-item.component';
 import { OverlapToolbarComponent } from 'src/app/shared-components/overlap-toolbar/overlap-toolbar.component';
 import { ListHelper } from '../tabs';
@@ -19,6 +21,7 @@ import { ImageSlideshowComponent } from './image-slideshow/image-slideshow.compo
     OverlapToolbarComponent,
     ImageSlideshowComponent,
     MenuItemComponent,
+    MenuCardComponent,
   ]
 })
 export class BerandaComponent implements OnInit {
@@ -36,24 +39,79 @@ export class BerandaComponent implements OnInit {
       name: 'Perawatan Tubuh'
     }
   ];
-  listOfSuperDigital: ListHelper[] = [
+  listOfSuperDigital: MenuCardItem[] = [
     {
       icon: 'desktop',
-      name: 'Pulsa & Paket Data'
+      name: 'Sari Ayu Cantikan 1Kg',
+      type: 'Pouch',
+      startPrice: Math.floor(Math.random() * 10 * 10000)
     },
     {
-      icon:'flash',
-      name:'Listrik PLN'
+      icon: 'flash',
+      name: 'Martabak Bagelan 500Gr',
+      type: 'Besek',
+      startPrice: Math.floor(Math.random() * 10 * 10000)
     },
     {
-      icon:'wine',
-      name:'Air PDAM'
+      icon: 'wine',
+      name: 'Sari Buah Apel 1Kg',
+      type: 'Dus',
+      startPrice: Math.floor(Math.random() * 10 * 10000)
     },
     {
-      icon:'medkit',
-      name:'BPJS Kesehatan'
+      icon: 'medkit',
+      name: 'Obat obatan 1Kg',
+      type: 'Dus',
+      startPrice: Math.floor(Math.random() * 10 * 10000)
     },
-
+    {
+      icon: 'desktop',
+      name: 'Sari Ayu Cantikan 1Kg',
+      type: 'Pouch',
+      startPrice: Math.floor(Math.random() * 10 * 10000)
+    },
+    {
+      icon: 'flash',
+      name: 'Martabak Bagelan 500Gr',
+      type: 'Besek',
+      startPrice: Math.floor(Math.random() * 10 * 10000)
+    },
+    {
+      icon: 'wine',
+      name: 'Sari Buah Apel 1Kg',
+      type: 'Dus',
+      startPrice: Math.floor(Math.random() * 10 * 1000)
+    },
+    {
+      icon: 'medkit',
+      name: 'Obat obatan 1Kg',
+      type: 'Dus',
+      startPrice: Math.floor(Math.random() * 10 * 1000)
+    },
+    {
+      icon: 'desktop',
+      name: 'Sari Ayu Cantikan 1Kg',
+      type: 'Pouch',
+      startPrice: Math.floor(Math.random() * 10 * 1000)
+    },
+    {
+      icon: 'flash',
+      name: 'Martabak Bagelan 500Gr',
+      type: 'Besek',
+      startPrice: Math.floor(Math.random() * 10 * 10000)
+    },
+    {
+      icon: 'wine',
+      name: 'Sari Buah Apel 1Kg',
+      type: 'Dus',
+      startPrice: Math.floor(Math.random() * 10 * 10000)
+    },
+    {
+      icon: 'medkit',
+      name: 'Obat obatan 1Kg',
+      type: 'Dus',
+      startPrice: Math.floor(Math.random() * 10 * 10000)
+    },
   ];
 
   constructor() { }

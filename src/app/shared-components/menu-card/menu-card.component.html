@@ -1,0 +1,20 @@
+<section class="menu-items">
+  <h1 class="menu-items__category">{{title}}</h1>
+  <div class="menu-items__wrapper">
+    <ion-card *ngFor="let menu of menuItems" button>
+      <ion-card-header>
+        <ion-avatar>
+          <ion-icon [name]="'fast-food-outline'"></ion-icon>
+        </ion-avatar>
+        <ion-card-title>{{menu.name}}</ion-card-title>
+        <ion-card-subtitle>{{menu.type}}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <p>Mulai dari</p>
+        <p class="harga">Rp {{menu.startPrice|number}}</p>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+</section>
