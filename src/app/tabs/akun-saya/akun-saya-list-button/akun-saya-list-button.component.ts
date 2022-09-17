@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { IonicModule, ModalController } from '@ionic/angular';
+import { environment } from 'src/environments/environment';
 import { AcceptableModalAkunSaya, ListWithActionHelper } from '../akun-saya';
 import { ModalAkunBankComponent } from '../modal-akun-bank/modal-akun-bank.component';
 import { ModalAlamatPengirimanComponent } from '../modal-alamat-pengiriman/modal-alamat-pengiriman.component';
@@ -23,6 +24,7 @@ import { ModalVoucherComponent } from '../modal-voucher/modal-voucher.component'
   ]
 })
 export class AkunSayaListButtonComponent implements OnInit {
+  version: string = environment.appVersion;
   listOfPersonalInfo: ListWithActionHelper[] = [
     {
       icon: 'person-circle-outline',
@@ -90,7 +92,7 @@ export class AkunSayaListButtonComponent implements OnInit {
     switch (name) {
       case 'DATA_DIRI': return ModalDataDiriComponent;
       case 'ALAMAT_PENGIRIMAN': return ModalAlamatPengirimanComponent;
-      case 'AKUN_BANK':return ModalAkunBankComponent;
+      case 'AKUN_BANK': return ModalAkunBankComponent;
       case 'VOUCHER': return ModalVoucherComponent;
       case 'USULAN_HARGA': return ModalUsulanHargaComponent;
       case 'BANTUAN': return ModalBantuanComponent;
